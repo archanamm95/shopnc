@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<!--[if IE 8 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html dir="{{ direction }}" lang="{{ lang }}">
+<!--<![endif]-->
+<head>
+	<!-- Remove after design update -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{{ title }}</title>
+<base href="{{ base }}" />
+{% if description %}
+<meta name="description" content="{{ description }}" />
+{% endif %}
+{% if keywords %}
+<meta name="keywords" content="{{ keywords }}" />
+{% endif %}
+<script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
+<link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+<script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/magnific/magnific-popup.css" />
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
+<link href="catalog/view/theme/{{ activetemplate }}/stylesheet/owl.carousel.min.css" rel="stylesheet">
+<script src="catalog/view/theme/{{ activetemplate }}/javascripts/owl.carousel.min.js" type="text/javascript"></script>
+<script src="catalog/view/theme/{{ activetemplate }}/javascripts/theme.js" type="text/javascript"></script>
+<link href="catalog/view/theme/{{ activetemplate }}/stylesheet/stylesheet.css" rel="stylesheet">
+
+
+{% if direction == 'rtl' %}
+  
+<link href="catalog/view/theme/{{ activetemplate }}/stylesheet/rtl.css" rel="stylesheet">
+{% endif %}
+
+{% for style in styles %}
+<link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" />
+{% endfor %}
+{% for script in scripts %}
+<script src="{{ script }}" type="text/javascript"></script>
+{% endfor %}
+<script src="catalog/view/javascript/common.js" type="text/javascript"></script>
+<script src="catalog/view/javascript/support.js" type="text/javascript"></script>
+<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<script src="catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js"></script>
+<script src="catalog/view/javascript/jquery/datetimepicker/moment/moment.min.js" type="text/javascript"></script>
+<script src="catalog/view/javascript/jquery/datetimepicker/moment/moment-with-locales.min.js" type="text/javascript"></script>
+<script src="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+{% for link in links %}
+<link href="{{ link.href }}" rel="{{ link.rel }}" />
+{% endfor %}
+{% for analytic in analytics %}
+{{ analytic }}
+{% endfor %}
+</head>
+<body>
+  <main> 
+  	<div id="menu_wrapper"></div>
+    <header id="header" class="{{ ishome }}">
+    	<div class="header-nav">
+      		<div class="container">
+			  <div class="row">
+		      	<div class="col-xs-12 col-sm-12 col-md-12 center-nav">
+		      		{{ headerbefore }}
+		    	</div>
+			</div>
+			</div>
+		</div>
+		<div class="header-top">
+			<div class="container">
+				<div class="row">
+					<div class="header-top-left col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						  <div id="_desktop_logo">
+					        <div class="desktop-logo">
+					          <div id="logo">
+					            {% if logo %}
+					            <a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>
+					            {% else %}
+					            <span style="font-size: 20px;line-height: 20px;">
+					              <a href="{{ home }}">
+					                {{ name }}
+					              </a>
+					            </span>
+					            {% endif %}
+					          </div>
+					        </div>
+				        </div>
+		      		</div>	
+		      		<!-- Remove Style after design update -->
+					<div  class="header-top-center col-lg-12 col-md-4 col-sm-4 col-xs-4">
+						<!-- code ends -->
+
+						<div id="_desktop_top_menu" class="menu js-top-menu hidden-xs hidden-sm home">
+                  <ul id="top-menu" class="top-menu" data-depth="0">
+                                                                        
+                  <li class="maintitle"><a href="{{base}}">HOME</a></li>
+                  <li class="maintitle"><a href="{{about_us}}">ABOUT US</a></li>
+                  <li class="top_level_category dropdown">
+              		<a class="dropdown-item" >PRODUCTS
+              		</a>
+              <span class="pull-xs-right hidden-md hidden-lg">
+                  <span data-target="#top_sub_menu_5782" data-toggle="collapse" class="navbar-toggler collapse-icons">
+                    <i class="fa fa-angle-down add"></i>
+                    <i class="fa fa-angle-up remove"></i>
+                  </span>
+              </span>
+              <div id="top_sub_menu_5782" class="dropdown-menu popover sub-menu collapse" >
+              <ul class="list-unstyled childs_1 category_dropdownmenu  single-dropdown-menu " data-depth="1">
+
+              <li><a href="{{product_authentication}}">PRODUCT AUTHENTICATION</a></li>
+             
+              </ul>
+
+            </div>
+            </li> 
+                  <li class="top_level_category dropdown">
+              <a class="dropdown-item" >CUSTOMER SERVICE
+              </a>
+              <span class="pull-xs-right hidden-md hidden-lg">
+                  <span data-target="#top_sub_menu_5782" data-toggle="collapse" class="navbar-toggler collapse-icons">
+                    <i class="fa fa-angle-down add"></i>
+                    <i class="fa fa-angle-up remove"></i>
+                  </span>
+              </span>
+              <div id="top_sub_menu_5782" class="dropdown-menu popover sub-menu collapse" style="width: 230px;">
+              <ul class="list-unstyled childs_1 category_dropdownmenu  single-dropdown-menu " data-depth="1">
+
+              <li><a href="{{faq}}">FAQ</a></li>
+              <li><a href="{{privacy}}">PRIVACY POLICY</a></li>
+              <li><a href="{{return}}">RETURN & REFUND POLICY</a></li>
+              <li><a href="{{terms_and_conditions}}">TERMS & CONDITIONS</a></li>
+              </ul>
+
+            </div>
+            </li> 
+            	<li class="maintitle"><a href="{{contact}}">CONTACT US</a></li>
+            <!-- 	{% if not logged  %}
+            	<li class="maintitle"><a href="{{register}}">MEMBER</a></li> 
+            	{% endif %}  -->
+          	</ul>
+    				</div>
+
+				    {{ menu }}
+				    </div>
+					<div class="header-top-right col-lg-4 col-md-4">
+						<div id="_desktop_seach_widget">
+				            <div id="ishisearch_widget" class="search-widget">
+				              <div class="search-logo">
+				              	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">   
+							        <symbol id="magnifying-desktop" viewBox="0 0 1200 1200"><title>magnifying-desktop</title>
+							          <path d="M606.209,578.714L448.198,423.228C489.576,378.272,515,318.817,515,253.393C514.98,113.439,399.704,0,257.493,0
+							               C115.282,0,0.006,113.439,0.006,253.393s115.276,253.393,257.487,253.393c61.445,0,117.801-21.253,162.068-56.586
+							               l158.624,156.099c7.729,7.614,20.277,7.614,28.006,0C613.938,598.686,613.938,586.328,606.209,578.714z M257.493,467.8
+							               c-120.326,0-217.869-95.993-217.869-214.407S137.167,38.986,257.493,38.986c120.327,0,217.869,95.993,217.869,214.407
+							               S377.82,467.8,257.493,467.8z"></path>
+							         </symbol>
+							      </svg>
+							      <svg class="icon" viewBox="0 0 40 40"><use xlink:href="#magnifying-desktop" x="18%" y="25%"></use></svg>
+							  </div>
+				              <form>{{ search }}</form>
+				            </div>
+		    			</div>  
+				        <div id="_desktop_user_info"> 
+					        <div class="user-info">
+								<div class="dropdown">
+									<a title="{{ text_account }}" class="dropdown-toggle" data-toggle="dropdown"> 
+										<div class="user-logo hidden-sm hidden-xs">
+											<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">          
+											    <symbol id="user-desktop" viewBox="0 0 480 480"><title>user-desktop</title>
+									              <path d="M187.497,152.427H73.974c-38.111,0-69.117,31.006-69.117,69.117v39.928h251.758v-39.928
+									                 C256.614,183.433,225.608,152.427,187.497,152.427z M241.614,246.473H19.856v-24.928c0-29.84,24.277-54.117,54.117-54.117h113.523
+									                 c29.84,0,54.117,24.277,54.117,54.117L241.614,246.473L241.614,246.473z"></path>
+									              <path d="M130.735,145.326c40.066,0,72.663-32.597,72.663-72.663S170.802,0,130.735,0S58.072,32.596,58.072,72.663
+									                 S90.669,145.326,130.735,145.326z M130.735,15c31.796,0,57.663,25.867,57.663,57.663s-25.867,57.663-57.663,57.663
+									                 s-57.663-25.868-57.663-57.663S98.939,15,130.735,15z"></path>
+									            </symbol> 
+											</svg>
+								   			<svg class="icon" viewBox="0 0 40 40"><use xlink:href="#user-desktop" x="19%" y="19%"></use></svg>
+										</div> 
+										<div class="user-logo hidden-lg hidden-md">
+											<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">          
+											    <symbol id="user-desktop" viewBox="0 0 480 480"><title>user-desktop</title>
+									              <path d="M187.497,152.427H73.974c-38.111,0-69.117,31.006-69.117,69.117v39.928h251.758v-39.928
+									                 C256.614,183.433,225.608,152.427,187.497,152.427z M241.614,246.473H19.856v-24.928c0-29.84,24.277-54.117,54.117-54.117h113.523
+									                 c29.84,0,54.117,24.277,54.117,54.117L241.614,246.473L241.614,246.473z"></path>
+									              <path d="M130.735,145.326c40.066,0,72.663-32.597,72.663-72.663S170.802,0,130.735,0S58.072,32.596,58.072,72.663
+									                 S90.669,145.326,130.735,145.326z M130.735,15c31.796,0,57.663,25.867,57.663,57.663s-25.867,57.663-57.663,57.663
+									                 s-57.663-25.868-57.663-57.663S98.939,15,130.735,15z"></path>
+									            </symbol> 
+											</svg>
+								   			<svg class="icon" viewBox="0 0 40 40"><use xlink:href="#user-desktop" x="19%" y="23%"></use></svg>
+										</div>           
+										<span class="expand-more">{{ text_account }}</span>
+										<i class="fa fa-angle-down"></i>
+									</a>
+									<ul class="dropdown-menu">
+									{% if logged %}
+									<li><a href="{{ account }}">{{ text_account }}</a></li>
+									<li><a href="{{ order }}">{{ text_order }}</a></li>
+									<!-- <li><a href="{{ transaction }}">{{ text_transaction }}</a></li> -->
+									<!-- <li><a href="{{ download }}">{{ text_download }}</a></li> -->
+									{% if backoffice_eligibility == true %}
+									<li><a href="{{ backoffice }}">Backoffice</a></li>
+									{% endif %}
+									<li><a href="{{ logout }}">{{ text_logout }}</a></li>
+									{% else %}
+								<!-- 	{% if purchase_session == MLM_COMPANY %}
+									<li><a href="{{ register }}"><i class="fa fa-user"></i>  {{ text_register }}</a></li>
+									{% endif %} -->
+									{% if referral_session == MLM_COMPANY %}
+									<li><a href="{{ login }}"><i class="fa fa-sign-in"></i>  {{ text_login }}</a></li>
+									{% endif %}
+									<!-- <li><a href="{{ wishlist }}" id="wishlist-total" title="{{ text_wishlist }}"><i class="fa fa-heart"></i>  <span class="wishlist-text">{{ text_wishlist }}</span></a></li> -->
+									{% endif %}
+									</ul>             
+								</div>           
+							</div>
+						</div>
+				        <div id="_desktop_cart">
+				          <div class="blockcart">
+				            {{ cart }}
+				          </div>
+				        </div>   
+		    		</div> 
+				</div>
+			</div>
+		</div>  
+        {{ headerafter }} 
+       
+    </header>
+    <div id="spin-wrapper"></div>
+	<div id="siteloader">
+		{% if loader == 'loader_1' %}
+		<div class="loader loader-1"></div>
+		{% elseif loader == 'loader_2' %}
+		<div class="loader loader-2">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		{% elseif loader == 'loader_3' %}
+		<div class="loader loader-3">
+	      <div></div>
+	      <div></div>
+	      <div></div>
+	  	</div>
+		{% else %}
+		<div class="loader loader-4 la-dark la-2x">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		{% endif %}
+	</div>
+
+<!-- ======= Quick view JS ========= -->
+<script> 
+function quickbox(){
+ 	if ($(window).width() > 767) {
+		$('.quickview-button').magnificPopup({
+		type:'iframe',
+		delegate: 'a',
+		preloader: true,
+		tLoading: 'Loading image #%curr%...',
+		});    
+ 	}  
+}
+jQuery(document).ready(function() {quickbox();});
+jQuery(window).resize(function() {quickbox();});
+$('input[name=\'search\']').autocomplete({
+	'source': function(request, response) {
+		$.ajax({
+			url: 'index.php?route=product/search/autocomplete&filter_name=' +  encodeURIComponent(request),
+			dataType: 'json',
+			success: function(result) {
+				var products = result.products;
+				$('.ajaxishi-search ul li').remove();
+				  $.each(products, function(index,product) {
+					var html = '<li>';
+						html += '<div>';
+						html += '<a href="' + product.url + '" title="' + product.name + '">';
+						html += '<div class="product-image"><img alt="' + product.name + '" src="' + product.image + '"></div>';
+						html += '<div class="product-desc">';
+						html += '<div class="product-name">' + product.name + '</div>';
+						if (product.special) {
+                            html += '<div class="product-price"><span class="special">' + product.price + '</span><span class="price">' + product.special + '</span></div>';
+                        } else {
+                            html += '<div class="product-price"><span class="price">' + product.price + '</span></div>';
+						}
+						html += '</div>';
+						html += '</a>';
+						html += '</div>';
+						html += '</li>';
+						$('.ajaxishi-search ul').append(html);
+				  });
+				  $('.ajaxishi-search').css('display','block');
+                return false;
+			}
+		});
+	},
+	'select': function(product) {
+		$('input[name=\'filter_name\']').val(product.name);
+	}
+});
+</script>

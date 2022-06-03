@@ -1,0 +1,93 @@
+{% if error_warning %} 
+<div class="alert alert-warning alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}</div>
+{% endif %}
+{% if shipping_methods %}
+<p>{{ text_shipping_method }}</p>
+{% for shipping_method in shipping_methods %}
+<p><strong>{{ shipping_method.title }}</strong></p>
+{% if not shipping_method.error %}
+{% for quote in shipping_method.quote %}
+<div class="radio">
+  <label> {% if quote.code == code or not code %}
+    {% set code = quote.code %}
+    <input type="radio" name="shipping_method" value="{{ quote.code }}" checked="checked" />
+    {% else %}
+    <input type="radio" name="shipping_method" value="{{ quote.code }}" />
+    {% endif %}
+    {{ quote.title }} - {{ quote.text }}</label>
+</div>
+{% endfor %}
+{% else %}
+<div class="alert alert-danger alert-dismissible">{{ shipping_method.error }}</div>
+{% endif %}
+{% endfor %}
+{% endif %}
+<p><strong>{{ text_comments }}</strong></p>
+<p>
+  <textarea name="comment" rows="8" class="form-control">{{ comment }}</textarea>
+</p>
+<div class="buttons">
+  <div class="pull-right">
+    <br>
+    <input type="button" value="{{ button_continue }}" id="button-shipping-method" data-loading-text="{{ text_loading }}" class="btn btn-primary" />
+  </div>
+  <div class="pull-left">
+    <input id="prev" type="button" name="previous" class="previous action-button-previous" value="Previous" />
+  </div>
+</div>
+<script>
+ $(document ).ready(function() {
+
+    var delivery_charge="{{delivery_details}}";
+
+    // alert(delivery_charge);
+    $.ajax({
+              url: 'index.php?route=checkout/checkout&flat_rate='+delivery_charge,
+              dataType: 'html',
+              success: function(data) {
+
+                // alert(data);
+
+                // if(data == "free")
+                // {
+
+                //   alert("freee");
+                // }
+
+                // console.log(data);
+
+              },
+              error: function(xhr, ajaxOptions, thrownError) {
+                  alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+              }
+        });
+
+
+    var member_register= "{{member_register}}";
+    $('#account_billing').hide();
+    $('#method').addClass('active');
+
+  $("#prev").click(function() {
+
+    if(member_register == "1")
+    {
+      $('#delivery_method').hide();
+      $('#delivery_details').remove();
+      $('#member_register').show();
+      $('#method').removeClass('active');
+      $('#member').addClass('active');
+    }
+    else
+    {
+      $('#method').removeClass('active');
+      $('#account').addClass('active');
+      $('#delivery_method').hide();
+      $('#delivery_details').show();
+      $('#delivery_details').show();
+    }
+    $('#delivery_details').show();
+   
+  });
+
+  });
+</script>

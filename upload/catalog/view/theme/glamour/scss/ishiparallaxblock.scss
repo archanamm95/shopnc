@@ -1,0 +1,126 @@
+.ishiparallaxbannerblock {
+	overflow: hidden;
+	margin-bottom: 60px;
+	@media (max-width: 991px){
+		margin-bottom: 30px
+	}
+	.parallax {
+		padding: 130px 0;
+		overflow: hidden;
+			@media (max-width: 1199px){
+				padding: 80px 0;
+			}			
+		.parallax-list {
+			display: inline-block;
+			vertical-align: middle;
+			text-align: center;
+			float: right;
+			width: 50%;
+			@media (max-width: 991px){
+				width:70%;
+			} 
+
+			@media (max-width: 767px) {/* If media is below 768 */
+				display: block;
+				text-align: center;
+				width: 100%;
+			}
+			.parallax-title{
+				font-size: 40px;
+				font-weight: 500;
+				line-height: 44px;
+				margin-bottom: 22px;
+				position: relative;
+				letter-spacing: 5px;
+				color: $brand-secondary;
+				@media (max-width: 991px) {/* If media is below 768 */
+					font-size: 25px;
+					margin-bottom: 0;
+				}
+				@media (max-width: 543px) {/* If media is below 768 */
+					font-size: 25px;
+					line-height:30px;
+					margin-bottom:10px;
+				}	
+			}
+			.parallax-subtitle{
+				font-size: 64px;
+			    font-weight: 600;
+			    line-height: 80px;
+			    color: #010101;
+			    margin-bottom: 20px;
+			    text-transform: uppercase;
+				@media (max-width: 1199px) {/* If media is below 768 */
+					font-size: 45px;
+				}
+				@media (max-width: 991px) {/* If media is below 768 */
+					font-size: 35px;
+					margin-bottom:0;
+				}
+				@media (max-width: 767px) {/* If media is below 768 */
+					font-size: 50px;
+				}
+				@media (max-width: 543px) {/* If media is below 768 */
+					font-size: 29px;
+					line-height:40px;
+					margin-bottom:10px;
+				}
+				span {
+					font-weight: 500;
+				}
+			}
+			.parallax-offer{
+				font-size: 100px;
+				line-height: 80px;
+				font-weight: 600;
+				margin-bottom: 30px;
+				position: relative;
+				color: $brand-secondary;
+			}
+			.parallax-desc{
+				font-size: 16px;
+				font-weight: 500;
+				line-height: 20px;
+				padding: 11px 70px;
+				color: $brand-secondary;
+				position: relative;
+				z-index: 2;
+				border: 1px solid #ccc;
+				background: #f8f8f8;
+				display: inline-block;
+				margin-bottom: 47px;
+				border-radius: 10px;
+				@media (max-width: 991px) {/* If media is below 768 */
+					font-size: 15px;
+					margin-bottom: 30px;
+				}
+				@media (max-width: 543px) {/* If media is below 768 */
+					font-size: 13px;
+					margin-bottom:20px;
+					padding:11px 28px;
+				}
+			}
+			> a{
+				font-size: 14px;
+				color: $light-color;
+				background-color: $brand-primary;
+				border: 1px solid $brand-primary;
+				font-weight: 400;
+				padding: 12px 20px;
+				margin-top: 0;
+				position: relative;
+				overflow: hidden;
+				border-radius: 0;
+				text-transform: uppercase;
+				-webkit-transition: 0.5s all ease;
+				-moz-transition: 0.5s all ease;
+				-o-transition: 0.5s all ease;
+				transition: 0.5s all ease;
+				&:hover {
+					border-color: #999;  
+					background: #999;
+				}
+			}
+		}
+	}
+}

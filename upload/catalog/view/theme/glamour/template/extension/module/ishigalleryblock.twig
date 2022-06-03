@@ -1,0 +1,55 @@
+<section id="{{ ishi_randomnumer }}" class="ishigalleryblock clearfix">
+	<div class="bannerblock container">
+  		<h2 class="home-title">{{ heading }}</h2>
+		<div class="galleryfilter">   
+			{% set tags = "" %}
+			{% for banner in banners %}
+			{% if banner.title != blank %}
+				{% set checkarray = tags|split(',') %}
+				{% if banner.title not in tags %}
+					{% set tags = tags ~ banner.title ~ ',' %}
+					<button class="{% if loop.first %}is-active{% endif %}" data-rel="{{ banner.reltitle }}">{{ banner.title }}</button>
+				{% endif %}
+			{% endif %}
+			{% endfor %}
+		</div>
+		<div id="portfolio" class="grid row">      
+			{% for banner in banners %}
+				<div class="gallery-container thumbnails col-md-4 col-sm-4 col-xs-6 {{ scale }} {{ banner.reltitle }}" data-category="{{ banner.reltitle }}">
+					<a href="{{ banner.image }}" class="{{ style }} {{ scale }}">
+					<img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive" />
+					<div class="imageoverlay"></div>
+					</a>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function() {
+			var selectedClass = '';
+				$("button").click(function(){ 
+				selectedClass = $(this).attr("data-rel"); 
+				$("#portfolio").fadeTo(100, 0.1);
+				$("#portfolio .gallery-container").not("."+selectedClass).fadeOut().removeClass('scale-anm');
+				setTimeout(function() {
+					$("."+selectedClass).fadeIn().addClass('scale-anm');
+					$("#portfolio").fadeTo(300, 1);
+				}, 300); 
+				$( '.galleryfilter button' ).removeClass('is-active');
+				$( this ).addClass('is-active');
+				});
+			});
+			var defaultClass = $('button.is-active').attr("data-rel");
+			$("#portfolio .gallery-container").not("."+defaultClass).fadeOut().removeClass('scale-anm');
+			$("."+defaultClass).fadeIn().addClass('scale-anm');   
+
+				$('.thumbnails').magnificPopup({
+			type:'image',
+			delegate: 'a',
+			gallery: {
+			enabled: true,
+			navigateByImgClick: true
+			}
+		});
+	</script>
+</section>

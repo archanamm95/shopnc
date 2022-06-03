@@ -1,0 +1,48 @@
+2022-04-04 4:27:01 - PHP Notice:  Undefined index: member_register_eligibility in /var/www/html/shopnc/upload/catalog/controller/checkout/payment_address.php on line 7
+2022-04-04 4:32:34 - PHP Notice:  Undefined index: register_total_price in /var/www/html/shopnc/upload/admin/controller/sale/order.php on line 1048
+2022-04-04 4:53:55 - PHP Notice:  Trying to access array offset on value of type int in /var/www/html/shopnc/upload/admin/controller/sale/order.php on line 1064
+2022-04-04 4:54:06 - PHP Notice:  Trying to access array offset on value of type int in /var/www/html/shopnc/upload/admin/controller/sale/order.php on line 1064
+2022-04-04 4:54:17 - PHP Notice:  Trying to access array offset on value of type bool in /var/www/html/shopnc/upload/admin/controller/sale/order.php on line 842
+2022-04-04 4:54:17 - PHP Notice:  Trying to access array offset on value of type bool in /var/www/html/shopnc/upload/admin/controller/sale/order.php on line 843
+2022-04-04 4:54:17 - PHP Notice:  Trying to access array offset on value of type bool in /var/www/html/shopnc/upload/admin/controller/sale/order.php on line 844
+2022-04-04 4:54:17 - PHP Notice:  Trying to access array offset on value of type bool in /var/www/html/shopnc/upload/admin/controller/sale/order.php on line 845
+2022-04-04 4:54:17 - PHP Notice:  Trying to access array offset on value of type bool in /var/www/html/shopnc/upload/admin/controller/sale/order.php on line 846
+2022-04-04 4:54:17 - PHP Notice:  Trying to access array offset on value of type bool in /var/www/html/shopnc/upload/admin/controller/sale/order.php on line 847
+2022-04-04 4:54:46 - PHP Notice:  Trying to access array offset on value of type int in /var/www/html/shopnc/upload/admin/controller/sale/order.php on line 1064
+2022-04-04 4:56:50 - PHP Notice:  Trying to access array offset on value of type int in /var/www/html/shopnc/upload/admin/controller/sale/order.php on line 1064
+2022-04-04 5:20:31 - PHP Notice:  Undefined index: user_type in /var/www/html/shopnc/upload/admin/controller/sale/order.php on line 883
+2022-04-04 8:58:35 - PHP Notice:  Trying to access array offset on value of type int in /var/www/html/shopnc/upload/admin/controller/sale/order.php on line 1327
+2022-04-04 9:13:11 - PHP Notice:  Trying to access array offset on value of type int in /var/www/html/shopnc/upload/admin/controller/sale/order.php on line 1327
+2022-04-04 9:16:27 - PHP Notice:  Trying to access array offset on value of type int in /var/www/html/shopnc/upload/admin/controller/sale/order.php on line 1327
+2022-04-04 9:46:17 - PHP Notice:  Trying to access array offset on value of type int in /var/www/html/shopnc/upload/admin/controller/sale/order.php on line 1327
+2022-04-08 4:32:54 - PHP Notice:  Undefined index: shipping_flat_cost in /var/www/html/shopnc/upload/admin/model/setting/setting.php on line 21
+2022-04-08 4:33:28 - PHP Warning:  A non-numeric value encountered in /var/www/html/shopnc/upload/system/library/cart/tax.php on line 113
+2022-04-08 4:33:28 - PHP Warning:  A non-numeric value encountered in /var/www/html/shopnc/upload/catalog/model/extension/total/shipping.php on line 24
+2022-04-08 4:33:52 - PHP Notice:  Undefined index: shipping_flat_cost in /var/www/html/shopnc/upload/admin/model/setting/setting.php on line 21
+2022-04-08 4:34:12 - PHP Warning:  A non-numeric value encountered in /var/www/html/shopnc/upload/system/library/cart/tax.php on line 113
+2022-04-08 4:34:12 - PHP Warning:  A non-numeric value encountered in /var/www/html/shopnc/upload/catalog/model/extension/total/shipping.php on line 24
+2022-04-08 4:34:12 - PHP Warning:  A non-numeric value encountered in /var/www/html/shopnc/upload/system/library/cart/tax.php on line 113
+2022-04-08 4:34:12 - PHP Warning:  A non-numeric value encountered in /var/www/html/shopnc/upload/catalog/model/extension/total/shipping.php on line 24
+2022-04-08 4:34:18 - PHP Warning:  A non-numeric value encountered in /var/www/html/shopnc/upload/system/library/cart/tax.php on line 113
+2022-04-08 4:34:18 - PHP Warning:  A non-numeric value encountered in /var/www/html/shopnc/upload/catalog/model/extension/total/shipping.php on line 24
+2022-04-08 4:34:18 - PHP Warning:  A non-numeric value encountered in /var/www/html/shopnc/upload/system/library/cart/tax.php on line 113
+2022-04-08 4:34:18 - PHP Warning:  A non-numeric value encountered in /var/www/html/shopnc/upload/catalog/model/extension/total/shipping.php on line 24
+2022-04-08 4:41:17 - PHP Notice:  Undefined index: shipping_flat_cost in /var/www/html/shopnc/upload/admin/model/setting/setting.php on line 21
+2022-04-08 4:43:21 - PHP Warning:  A non-numeric value encountered in /var/www/html/shopnc/upload/system/library/cart/tax.php on line 113
+2022-04-08 4:43:21 - PHP Warning:  A non-numeric value encountered in /var/www/html/shopnc/upload/catalog/model/extension/total/shipping.php on line 24
+2022-04-08 4:43:27 - PHP Warning:  A non-numeric value encountered in /var/www/html/shopnc/upload/system/library/cart/tax.php on line 113
+2022-04-08 4:43:27 - PHP Warning:  A non-numeric value encountered in /var/www/html/shopnc/upload/catalog/model/extension/total/shipping.php on line 24
+2022-04-08 4:47:00 - PHP Warning:  A non-numeric value encountered in /var/www/html/shopnc/upload/catalog/model/extension/total/shipping.php on line 24
+2022-04-08 4:47:02 - PHP Warning:  A non-numeric value encountered in /var/www/html/shopnc/upload/catalog/model/extension/total/shipping.php on line 24
+2022-04-08 4:50:47 - PHP Warning:  A non-numeric value encountered in /var/www/html/shopnc/upload/catalog/model/extension/total/shipping.php on line 24
+2022-04-08 4:50:49 - PHP Warning:  A non-numeric value encountered in /var/www/html/shopnc/upload/catalog/model/extension/total/shipping.php on line 24
+2022-04-08 10:55:57 - PHP Warning:  A non-numeric value encountered in /var/www/html/shopnc/upload/system/library/cart/tax.php on line 113
+2022-04-08 10:55:57 - PHP Warning:  A non-numeric value encountered in /var/www/html/shopnc/upload/catalog/model/extension/total/shipping.php on line 24
+2022-04-08 10:55:59 - PHP Warning:  A non-numeric value encountered in /var/www/html/shopnc/upload/system/library/cart/tax.php on line 113
+2022-04-08 10:55:59 - PHP Warning:  A non-numeric value encountered in /var/www/html/shopnc/upload/catalog/model/extension/total/shipping.php on line 24
+2022-04-08 10:56:29 - PHP Notice:  Trying to access array offset on value of type null in /var/www/html/shopnc/upload/admin/controller/sale/order.php on line 1141
+2022-04-08 10:57:05 - PHP Notice:  Trying to access array offset on value of type null in /var/www/html/shopnc/upload/admin/controller/sale/order.php on line 1141
+2022-04-08 10:57:19 - PHP Notice:  Trying to access array offset on value of type null in /var/www/html/shopnc/upload/admin/controller/sale/order.php on line 1141
+2022-04-08 10:58:03 - PHP Notice:  Trying to access array offset on value of type null in /var/www/html/shopnc/upload/admin/controller/sale/order.php on line 1141
+2022-04-08 10:58:23 - PHP Notice:  Trying to access array offset on value of type null in /var/www/html/shopnc/upload/admin/controller/sale/order.php on line 1141
+2022-04-08 10:58:44 - PHP Notice:  Trying to access array offset on value of type null in /var/www/html/shopnc/upload/admin/controller/sale/order.php on line 1141

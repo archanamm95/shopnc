@@ -1,0 +1,22 @@
+.manufacturerblock {
+	margin-bottom: 50px;
+	text-align: center;	
+	@media (max-width: 991px) {/* If media is below 992 */
+		margin-bottom: 30px;
+	}	
+	.home-title {
+		display: none;
+	}
+	.item {
+		img {
+			opacity: 0.8;
+			max-width: 130px;
+			display: inline-block;
+		}
+		&:hover {
+			img {
+				opacity: 1;
+			}
+		}
+	}
+}

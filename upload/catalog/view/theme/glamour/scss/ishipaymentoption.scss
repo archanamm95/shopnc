@@ -1,0 +1,48 @@
+.ishipaymentblock{
+	position: relative;
+	padding: 0 15px;
+	display: block;
+	overflow: hidden;
+	text-align: center;
+	@media (max-width: 991px) {
+		padding: 0;
+	}
+	@media (max-width: 543px) {
+		margin-top: 0;
+	}
+	#paymentblock{
+		margin: 10px 0 22px;
+		@media (max-width: 991px) {
+			margin: 10px 0 20px;
+		}
+	}
+	.item{
+		display: inline-block;
+		vertical-align: middle;
+		@media screen and (min-width: 992px) and (max-width: 1199px) {
+			width: 39px;
+		}
+		a{
+			&:hover{
+				padding-left: 0;
+			}
+			img{
+				background:	transparent;
+				padding: 2px;
+				margin: 3px 1px;
+				cursor: pointer;
+				border-radius: 0;
+				-webkit-transform: perspective(1px) translateZ(0);
+				transform: perspective(1px) translateZ(0);
+				box-shadow: 0 0 4px 1px rgba(0,0,0,0.1);
+				-webkit-transition: all 0.25s;
+				-moz-transition: all 0.25s;
+				-o-transition: all 0.25s;
+				transition: all 0.25s;
+				@media (max-width: 370px) {
+					width: 41px;
+				}
+			}
+		}
+	}
+}

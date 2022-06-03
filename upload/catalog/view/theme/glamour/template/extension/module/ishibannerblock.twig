@@ -1,0 +1,28 @@
+<section id="{{ ishi_randomnumer }}" class="ishibannerblock clearfix">
+{% for banner in banners %}
+	<div class="bannerblock {{ column_class }}">
+		<div class="image-container">
+			<a href="{{ banner.link }}" class="{{ scale }}">
+				<img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive"> 
+				{% if banner.showtext == 1 %}
+					<div class="banner-desc">      	
+						<div class="banner-data">
+							{% if banner.title %}
+							<div class="banner-title">{{ banner.title }}</div>
+							{% endif %}
+							{% if banner.subtitle %}
+							<div class="banner-subtitle">{{ banner.subtitle }}</div>
+							{% endif %}
+						</div>
+						<div class="banner-btn">
+							{% if banner.button_name %}
+								<div href="{{ banner.link }}">{{ banner.button_name }}</div>
+							{% endif %}
+						</div>
+					</div>
+				{% endif %} 
+			</a>
+		</div>
+	</div>
+{% endfor %}
+</section>

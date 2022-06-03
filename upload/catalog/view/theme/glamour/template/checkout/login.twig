@@ -1,0 +1,160 @@
+<div class="row">
+  <div class="col-sm-6">
+    <h2>{{ text_new_customer }}</h2>
+    <p>{{ text_checkout }}</p>
+    <div class="radio">
+      <label> {% if account == 'register' %}
+        <!-- Guest Checkout -->
+         {% if purchase_session != MLM_COMPANY %}
+        <input id="guest_register" type="radio" name="account" value="register" checked="checked" />
+        {% else %}  
+        <input id="normal_register" type="radio" name="account" value="register" checked="checked" />
+        {% endif %}
+        <!-- Guest Checkout Code Ends -->
+        {% else %}
+        <input id="normal_register" type="radio" name="account" value="register" />
+        {% endif %}
+
+        {% if purchase_session != MLM_COMPANY %}
+
+          Guest Checkout
+
+        {% else %}  
+
+        {{ text_register }}
+
+        {% endif %}
+
+      </label>
+    </div>
+    <p>{{ text_register_account }}</p>
+
+    {% if influencer != "1"  %}
+
+      {% if purchase_session != MLM_COMPANY and product_total_price >= "400" %}
+
+       <div class="radio" >
+        <label> 
+
+           <input type="radio" name="account" value="register" id="member_register_radio" />
+
+          Member Register
+        </label>
+      </div>
+
+      <p>Becoming member you are offered a chance to do business with us</p>
+
+      {% endif %}
+
+    {% endif %}
+
+    {% if checkout_guest %}
+    <div class="radio">
+      <label> {% if account == 'guest' %}
+        <input type="radio" name="account" value="guest" checked="checked" />
+        {% else %}
+        <input type="radio" name="account" value="guest" />
+        {% endif %}
+        {{ text_guest }}</label>
+    </div>
+    {% endif %}
+
+    {% if purchase_link_member_register == true %}
+
+    <input type="button" value="{{ button_continue }}" id="purchase-button-account" data-loading-text="{{ text_loading }}" class="btn btn-primary steps" />
+
+
+
+    {% else %}
+<!-- 
+    <input type="button" value="{{ button_continue }}" id="button-account" data-loading-text="{{ text_loading }}" class="btn btn-primary" /> -->
+
+     <button data-loading-text="{{ text_loading }}" id="button-account" value="{{ button_continue }}" class="btn btn-primary step" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+           Continue
+        </button>
+
+    {% endif %}
+
+  </div>
+  <!-- {% if referral_session == MLM_COMPANY %}  
+  <div class="col-sm-6">
+    <h2>{{ text_returning_customer }}</h2>
+    <p>{{ text_i_am_returning_customer }}</p>
+    <div class="form-group">
+      <label class="control-label" for="input-email">{{ entry_email }}</label>
+      <input type="text" name="email" value="" placeholder="{{ entry_email }}" id="input-email" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="input-password">{{ entry_password }}</label>
+      <input type="password" name="password" value="" placeholder="{{ entry_password }}" id="input-password" class="form-control" />
+      <a href="{{ forgotten }}">{{ text_forgotten }}</a></div>
+    <input type="button" value="{{ button_login }}" id="button-login" data-loading-text="{{ text_loading }}" class="btn btn-primary" />
+  </div>
+</div>
+{% endif %} -->
+<script>
+  
+ $(document ).ready(function() {
+     $('#progress').val('8');
+     $('#login_button').attr('aria-expanded', 'true');
+     $('#account_button').attr('aria-expanded', 'false');
+     $('#mlm_button').attr('aria-expanded', 'false');
+     $('#delivery_button').attr('aria-expanded', 'false');
+     $('#delivery_method').attr('aria-expanded', 'false');
+     $('#payment_button').attr('aria-expanded', 'false');
+     $('#confirm_button').attr('aria-expanded', 'false');
+    var purchase_link_member_register ="{{member_register_checkbox}}";
+    if(purchase_link_member_register == true)
+    {
+      $("#member_register_radio").prop("checked", true);
+    }
+      $('#member_register_radio').click(function() {
+        $.ajax({
+          url: 'index.php?route=checkout/purchase_register',
+          dataType: 'html',
+          success: function(html) {
+            // alert(html);
+            location.reload();
+           
+          },
+          error: function(xhr, ajaxOptions, thrownError) {
+              alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+          }
+      });
+     
+    });
+     $('#guest_register').click(function() {
+      $.ajax({
+        url: 'index.php?route=checkout/normal_register',
+        dataType: 'html',
+        success: function(html) {
+          location.reload();
+        },
+        error: function(xhr, ajaxOptions, thrownError) {
+            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+        }
+    });
+   
+  });
+  });
+</script>
+
+<!-- <script>
+  $( document ).ready(function() {
+
+    if($('#member_register_radio').is(":checked") == true)
+    {
+      $.ajax({
+          url: 'index.php?route=checkout/purchase_register',
+          dataType: 'html',
+          success: function(html) {
+           
+          },
+          error: function(xhr, ajaxOptions, thrownError) {
+              alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+          }
+      });
+    }
+    });
+  </script> -->

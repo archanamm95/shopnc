@@ -1,0 +1,79 @@
+/* Ishi ProductBlock */
+.ishiproductsblock {
+  text-align: center;
+  .ishiproductstab{
+    @media (max-width: 767px) {/* If media is below 768 */
+      float: none;
+    }
+    position: relative;
+    border: 0;
+    text-align: center;
+    margin: 30px 0 15px;
+    .nav-item { 
+      @media (max-width: 400px) {/* If media is below 544 */
+        display: block;
+        margin-right: 0;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+      &:last-child{
+        @media (max-width: 543px) {/* If media is below 544 */
+          margin-bottom:0px;
+        }
+      }
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+      float: none;
+      .nav-link{
+        @media (max-width: 767px) {/* If media is below 768 */
+          padding: 8px 14px;
+        }
+        background: transparent none repeat scroll 0 0;
+        display: inline-block;
+        color: $black-color;
+        border: 0;
+        border-radius: 0;
+        letter-spacing: 0.42px;
+        font-weight:400;
+        font-size: 16px;
+        margin: 0;
+        text-transform: capitalize;
+        outline: medium none;
+        line-height: 20px;
+        padding: 10px 20px;
+        position: relative;
+        transition: all 400ms ease-in-out 0s;
+        -webkit-transition: all 400ms ease-in-out 0s;
+        -moz-transition: all 400ms ease-in-out 0s;
+        -o-transition: all 400ms ease-in-out 0s;
+        &.active, &:hover{
+          background: #f5f5f5;
+          color: $brand-primary;
+        }
+      }
+      &.active {
+        .nav-link{
+          background: #f5f5f5;
+          color: $brand-primary;
+        }
+      }
+    } 
+  }
+  .tab-content {
+    padding: 0;
+    margin-top: 10px; 
+    .block_content{
+      @media (max-width: 543px) {
+        padding: 0 5px;
+      }
+    }
+  }
+  .owl-carousel {
+    .owl-nav {
+      @media (min-width: 768px) {
+        margin-top: 5px;
+      }
+    }
+  }
+}

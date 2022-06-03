@@ -1,0 +1,24 @@
+#ishiheaderblock{
+	position: relative;
+	text-transform: capitalize;
+	font-size: 14px;
+	font-weight: 400;
+	span{
+		width: 22px;
+		height: 22px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 1px;
+		fill:$header-top-text-color;
+	}
+	@media (max-width: 330px) {
+		font-size: 13px;
+	}
+
+	p{
+		margin: 0;
+		color: $header-top-text-color;
+		display: inline-block;
+		padding: 11px 0;
+	}
+}

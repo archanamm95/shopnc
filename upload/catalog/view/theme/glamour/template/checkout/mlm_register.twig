@@ -1,0 +1,623 @@
+    
+    <style >
+
+      .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: x-large;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+  .h2-new {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0 solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.4375
+rem
+;
+    box-shadow: 0 15px 35px rgb(50 50 93 / 20%), 0 5px 15px rgb(0 0 0 / 17%);
+    outline: 0;
+}
+    .modal-title {
+    margin-bottom: 0;
+    line-height: 1.1;
+    }
+
+  
+
+      .modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.25rem;
+    border-bottom: 0 solid #e9ecef;
+    border-top-left-radius: 0.4375rem;
+    border-top-right-radius: 0.4375rem;
+  }
+  .pt-0, .py-0 {
+    padding-top: 0 !important;
+}
+/*.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}*/
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+ol, ul, dl {
+    margin-top: 0;
+    margin-bottom: 1
+rem
+;
+}
+ol {
+       display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    font-size: 16px;
+    font-weight: 900;
+    color: #333;
+}
+
+.label2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #232323;
+}
+
+.btn2 {
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1pxsolid transparent;
+    padding: 0.625rem1.25rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    border-radius: 0.375rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.el-upload-dragger:hover {
+    border-color: #409EFF;
+}
+
+.el-upload-dragger {
+    background-color: #fff;
+    border: 1px dashed #d9d9d9;
+    border-radius: 6px;
+    box-sizing: border-box;
+    width: 360px;
+    height: 180px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+upload-dragger {
+    -webkit-box-sizing: border-box;
+    cursor: pointer;
+}
+
+/*label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}*/
+
+
+
+
+
+
+
+
+      </style>
+
+
+      <style>
+
+     @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+  @import url("https://fonts.googleapis.com/css?family=Raleway");
+
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+ 
+
+.box {
+  display: block;
+  min-width: 300px;
+  height: 300px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+}
+
+.upload-options {
+  position: relative;
+  height: 75px;
+  background-color: cadetblue;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: center;
+  transition: background-color ease-in-out 150ms;
+}
+.upload-options:hover {
+  background-color: #7fb1b3;
+}
+.upload-options input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.upload-options label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  overflow: hidden;
+}
+.upload-options label::after {
+  content: "add";
+  font-family: "Material Icons";
+  position: absolute;
+  font-size: 2.5rem;
+  color: #e6e6e6;
+  top: calc(50% - 2.5rem);
+  left: calc(50% - 1.25rem);
+  z-index: 0;
+}
+.upload-options label span {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: middle;
+  text-align: center;
+}
+.upload-options label span:hover i.material-icons {
+  color: lightgray;
+}
+
+.js--image-preview {
+  height: 225px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-image: url("");
+  background-color: white;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.js--image-preview::after {
+  content: "photo_size_select_actual";
+  font-family: "Material Icons";
+  position: relative;
+  font-size: 4.5em;
+  color: #e6e6e6;
+  top: calc(50% - 3rem);
+  left: calc(50% - 2.25rem);
+  z-index: 0;
+}
+.js--image-preview.js--no-default::after {
+  display: none;
+}
+.js--image-preview:nth-child(2) {
+  background-image: url("http://bastianandre.at/giphy.gif");
+}
+
+i.material-icons {
+  transition: color 100ms ease-in-out;
+  font-size: 2.25em;
+  line-height: 55px;
+  color: white;
+  display: block;
+}
+
+.drop {
+  display: block;
+  position: absolute;
+  background: rgba(95, 158, 160, 0.2);
+  border-radius: 100%;
+  transform: scale(0);
+}
+
+.animate {
+  -webkit-animation: ripple 0.4s linear;
+          animation: ripple 0.4s linear;
+}
+
+@-webkit-keyframes ripple {
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
+
+@keyframes ripple {
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
+.btn2:hover {
+    box-shadow: 0 7px 14px rgb(50 50 93 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+    transform: translateY(-1px);
+}
+
+.btn-secondary2:hover {
+    color: #212529;
+    background-color: white;
+    border-color: white;
+}
+.btn-secondary2 {
+    color: #212529;
+    background-color: #fff;
+    border-color: #fff;
+    box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+}
+
+.btn2 {
+    position: relative;
+    text-transform: none;
+    transition: all 0.15s ease;
+    letter-spacing: 0.025em;
+    font-size: 0.875rem;
+    will-change: transform;
+}
+
+.btn2 {
+    /* display: inline-block; */
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1pxsolid transparent;
+    padding: 0.625rem1.25rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    border-radius: 0.375rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/*input, button, select, optgroup, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}*/
+.form-group {
+    margin-bottom: 15px;
+    text-align-last: left;
+}
+  </style>
+
+    
+
+
+
+      <div class="form-group required">
+    
+      {% for custom_field in custom_fields %}
+      
+      {% if custom_field.location == 'account' %}
+      
+      {% if custom_field.type == 'select' %}
+      <div class="form-group required">
+
+      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="col-sm-10" data-sort="{{ custom_field.sort_order }}">
+        <div class="form-group required">
+        <label class="control-label" for="input-payment-custom-field{{ custom_field.custom_field_id }}">{{ custom_field.name }}</label>
+      </div>
+        <select name="custom_field[{{ custom_field.location }}][{{ custom_field.custom_field_id }}]" id="input-payment-custom-field{{ custom_field.custom_field_id }}" class="form-control">
+          <option value="">{{ text_select }}</option>
+          
+          {% for custom_field_value in custom_field.custom_field_value %}
+          
+          <option value="{{ custom_field_value.custom_field_value_id }}">{{ custom_field_value.name }}</option>
+          
+          {% endfor %}
+        
+        </select>
+      </div>
+
+      </div>
+      {% endif %}
+      
+      {% if custom_field.type == 'radio' %}
+      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+        <label class="control-label">{{ custom_field.name }}</label>
+        <div id="input-payment-custom-field{{ custom_field.custom_field_id }}"> {% for custom_field_value in custom_field.custom_field_value %}
+          <div class="radio">
+            <label>
+              <input type="radio" name="custom_field[{{ custom_field.location }}][{{ custom_field.custom_field_id }}]" value="{{ custom_field_value.custom_field_value_id }}" />
+              {{ custom_field_value.name }}</label>
+          </div>
+          {% endfor %} </div>
+      </div>
+      {% endif %}
+      
+      {% if custom_field.type == 'checkbox' %}
+      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+        <label class="control-label">{{ custom_field.name }}</label>
+        <div id="input-payment-custom-field{{ custom_field.custom_field_id }}"> {% for custom_field_value in custom_field.custom_field_value %}
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="custom_field[{{ custom_field.location }}][{{ custom_field.custom_field_id }}][]" value="{{ custom_field_value.custom_field_value_id }}" />
+              {{ custom_field_value.name }}</label>
+          </div>
+          {% endfor %} </div>
+      </div>
+      {% endif %}
+      
+      {% if custom_field.type == 'text' %}
+      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+        <label class="control-label" for="input-payment-custom-field{{ custom_field.custom_field_id }}">{{ custom_field.name }}</label>
+        <input type="text" name="custom_field[{{ custom_field.location }}][{{ custom_field.custom_field_id }}]" value="{{ custom_field.value }}" placeholder="{{ custom_field.name }}" id="input-payment-custom-field{{ custom_field.custom_field_id }}" class="form-control" />
+      </div>
+      {% endif %}
+      
+      {% if custom_field.type == 'textarea' %}
+      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+        <label class="control-label" for="input-payment-custom-field{{ custom_field.custom_field_id }}">{{ custom_field.name }}</label>
+        <textarea name="custom_field[{{ custom_field.location }}][{{ custom_field.custom_field_id }}]" rows="5" placeholder="{{ custom_field.name }}" id="input-payment-custom-field{{ custom_field.custom_field_id }}" class="form-control">{{ custom_field.value }}</textarea>
+      </div>
+      {% endif %}
+      
+    <!--   {% if custom_field.type == 'file' %}
+      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+        <label class="control-label">{{ custom_field.name }}</label>
+        <br />
+        <button type="button" id="button-payment-custom-field{{ custom_field.custom_field_id }}" data-loading-text="{{ text_loading }}" class="btn btn-default"><i class="fa fa-upload"></i> {{ button_upload }}</button>
+        <input type="hidden" name="custom_field[{{ custom_field.location }}][{{ custom_field.custom_field_id }}]" value="" id="input-payment-custom-field{{ custom_field.custom_field_id }}" />
+      </div>
+      {% endif %} -->
+      
+      {% if custom_field.type == 'date' %}
+      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+        <label class="control-label" for="input-payment-custom-field{{ custom_field.custom_field_id }}">{{ custom_field.name }}</label>
+        <div class="input-group date">
+          <input type="text" name="custom_field[{{ custom_field.location }}][{{ custom_field.custom_field_id }}]" value="{{ custom_field.value }}" placeholder="{{ custom_field.name }}" data-date-format="YYYY-MM-DD" id="input-payment-custom-field{{ custom_field.custom_field_id }}" class="form-control" />
+          <span class="input-group-btn">
+          <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
+          </span></div>
+      </div>
+      {% endif %}
+      
+      {% if custom_field.type == 'time' %}
+      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+        <label class="control-label" for="input-payment-custom-field{{ custom_field.custom_field_id }}">{{ custom_field.name }}</label>
+        <div class="input-group time">
+          <input type="text" name="custom_field[{{ custom_field.location }}][{{ custom_field.custom_field_id }}]" value="{{ custom_field.value }}" placeholder="{{ custom_field.name }}" data-date-format="HH:mm" id="input-payment-custom-field{{ custom_field.custom_field_id }}" class="form-control" />
+          <span class="input-group-btn">
+          <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
+          </span></div>
+      </div>
+      {% endif %}
+      
+      {% if custom_field.type == 'datetime' %}
+      <div id="payment-custom-field{{ custom_field.custom_field_id }}" class="form-group custom-field" data-sort="{{ custom_field.sort_order }}">
+        <label class="control-label" for="input-payment-custom-field{{ custom_field.custom_field_id }}">{{ custom_field.name }}</label>
+        <div class="input-group datetime">
+          <input type="text" name="custom_field[{{ custom_field.location }}][{{ custom_field.custom_field_id }}]" value="{{ custom_field.value }}" placeholder="{{ custom_field.name }}" data-date-format="YYYY-MM-DD HH:mm" id="input-payment-custom-field{{ custom_field.custom_field_id }}" class="form-control" />
+          <span class="input-group-btn">
+          <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
+          </span></div>
+      </div>
+      {% endif %}
+      
+      {% endif %}
+      
+      {% endfor %}
+
+    </div>
+ 
+
+
+<div class="buttons clearfix">
+  <div class="pull-right">
+
+    <!-- <input type="button" value="{{ button_continue }}" id="mlm-register" data-loading-text="{{ text_loading }}" class="btn btn-primary" /> -->
+
+      <button data-loading-text="{{ text_loading }}" id="mlm-register" value="{{ button_continue }}" data-loading-text="{{ text_loading }}" class="btn btn-primary step" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+           Continue
+        </button>
+  </div>
+</div>
+
+
+ <input type="hidden" name="custom_field[account][10]" value="ads" id="one">
+
+
+<input type="hidden" id="sponsor" value="{{referral_session}}">
+
+
+
+<script type="text/javascript">
+
+  $('#payment-custom-field16').hide();
+  $('#input-payment-custom-field12').prop('readonly', true);
+
+// Sort the custom fields
+$('#account .form-group[data-sort]').detach().each(function() {
+  if ($(this).attr('data-sort') >= 0 && $(this).attr('data-sort') <= $('#account .form-group').length) {
+    $('#account .form-group').eq($(this).attr('data-sort')).before(this);
+  }
+
+  if ($(this).attr('data-sort') > $('#account .form-group').length) {
+    $('#account .form-group:last').after(this);
+  }
+
+  if ($(this).attr('data-sort') == $('#account .form-group').length) {
+    $('#account .form-group:last').after(this);
+  }
+
+  if ($(this).attr('data-sort') < -$('#account .form-group').length) {
+    $('#account .form-group:first').before(this);
+  }
+});
+
+$('#address .form-group[data-sort]').detach().each(function() {
+  if ($(this).attr('data-sort') >= 0 && $(this).attr('data-sort') <= $('#address .form-group').length) {
+    $('#address .form-group').eq($(this).attr('data-sort')).before(this);
+  }
+
+  if ($(this).attr('data-sort') > $('#address .form-group').length) {
+    $('#address .form-group:last').after(this);
+  }
+
+  if ($(this).attr('data-sort') == $('#address .form-group').length) {
+    $('#address .form-group:last').after(this);
+  }
+
+  if ($(this).attr('data-sort') < -$('#address .form-group').length) {
+    $('#address .form-group:first').before(this);
+  }
+});
+
+</script> 
+<script type="text/javascript">
+$('.date').datetimepicker({
+  language: '{{ datepicker }}',
+  pickTime: false
+});
+
+$('.time').datetimepicker({
+  language: '{{ datepicker }}',
+  pickDate: false
+});
+
+$('.datetime').datetimepicker({
+  language: '{{ datepicker }}',
+  pickDate: true,
+  pickTime: true
+});
+</script> 
+<script type="text/javascript">
+$('#collapse-mlm-register button[id^=\'button-payment-custom-field\']').on('click', function() {
+
+  var node = this;
+
+  $('#form-upload').remove();
+
+  $('body').prepend('<form enctype="multipart/form-data" id="form-upload" style="display: none;"><input type="file" name="file" /></form>');
+
+  $('#form-upload input[name=\'file\']').trigger('click');
+
+
+  if (typeof timer != 'undefined') {
+
+      clearInterval(timer);
+  }
+
+  timer = setInterval(function() {
+    if ($('#form-upload input[name=\'file\']').val() != '') {
+      clearInterval(timer);
+      $.ajax({
+        url: 'index.php?route=tool/upload',
+        type: 'post',
+        dataType: 'json',
+        data: new FormData($('#form-upload')[0]),
+        cache: false,
+        contentType: false,
+        processData: false,
+        beforeSend: function() {
+          $(node).button('loading');
+        },
+        complete: function() {
+          $(node).button('reset');
+        },
+        success: function(json) {
+          $('.text-danger').remove();
+
+          if (json['error']) {
+            $(node).parent().find('input[name^=\'custom_field\']').after('<div class="text-danger">' + json['error'] + '</div>');
+          }
+
+          if (json['success']) {
+
+            // alert($(node).parent());
+
+            $(node).parent().find('input[name^=\'custom_field\']').val(json['code']);
+          }
+        },
+        error: function(xhr, ajaxOptions, thrownError) {
+          alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+        }
+      });
+    }
+  }, 500);
+});
+</script> 
+
+<script>
+  $( document ).ready(function() {
+
+    $('#member').addClass('active');
+    $('#member_register').show();
+
+    var referal_username = $('#sponsor').val();
+    $('#input-payment-custom-field12').val(referal_username);
+
+    $("<i style='padding: 8px 7px 1px 5px;' class='fa fa-upload'></i><a data-target='#myModal' data-toggle='modal' class='MainNavText' id='ic_help' href='#myModal' style='font-weight: 400;font-size: 18px;' >IC Upload</a>").insertAfter("#input-payment-custom-field9");
+
+    });
+  </script>
+
+
+ 
+
+    

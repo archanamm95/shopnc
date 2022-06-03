@@ -1,0 +1,106 @@
+.ishiservicesblock {
+	.ishiservices {
+		overflow: hidden;
+		.services{
+			text-align: left;
+			cursor: pointer;
+			position: relative;
+			@media (max-width: 767px) {
+				margin-bottom: 20px;
+			}
+			@media (max-width: 543px) {
+				width: 100%;
+			}
+			@media screen and (min-width: 1200px) and (max-width: 1459px) {
+				text-align: center;
+			}
+			@media (max-width: 1199px) {
+				text-align: center;
+			}
+			&:before{
+				content: "";
+				background:#e6e6e6;
+				height: 60px;
+				width: 1px;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				margin: auto;
+			}
+			&:last-child {
+				margin-bottom: 0;
+				&:before{
+					display: none;
+				}
+			}
+			&:nth-child(4n+3){
+				@media (max-width: 767px) {
+					&:before{
+						display: none;
+					}
+				}
+			}
+			&:nth-child(4n+4){
+				@media (min-width: 544px) {
+					margin-bottom: 0px;
+				}
+			}
+			.service-img{	
+				span{
+					width: 75px;
+					height: 75px;
+					display: block;
+					background-position: 4px 1px;
+					text-align: center;
+					margin: 0 auto;
+					background-repeat: no-repeat;
+					transition: all 600ms ease;
+					-webkit-transition: all 600ms ease;
+					-moz-transition: all 600ms ease;
+					-ms-transition: all 600ms ease;
+					-o-transition: all 600ms ease;
+					position: relative;
+				}
+			}		
+			.service-block{
+				text-align: center;
+				@media (max-width: 1199px) {
+					text-align: center;
+					margin: 0 auto;
+					padding: 4px 0 0;
+				}
+				.service-title {	
+					font-size: 17px;
+					font-weight: 500;
+					margin: 10px 0;
+					text-transform: uppercase;
+					color:$brand-primary;
+					font-family: $primary-font;
+					transition: all 300ms ease;
+					-webkit-transition: all 300ms ease;
+					-moz-transition: all 300ms ease;
+					-ms-transition: all 300ms ease;
+					-o-transition: all 300ms ease;
+				}
+				.service-desc{
+					color:$brand-primary;
+					font-weight: 300;
+					font-size: 14px;
+				}
+			}
+			&:hover{
+				.service-img {
+					span {
+						background-position: 4px -68px;
+					}
+				}
+				.service-block{
+					.service-title {
+						color: $brand-secondary;
+					}
+				}
+			}
+		}
+	}    
+}
